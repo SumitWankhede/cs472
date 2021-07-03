@@ -1,0 +1,57 @@
+h1 {
+    color: #A4A400;
+    font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    font-size: 18pt;
+    text-decoration: underline;
+    letter-spacing:  0.25em;
+}
+
+h1 span {
+    background-color: #F0F0F0;
+}
+
+#mainHeading{
+    text-align: center;
+    font-size: 22pt;
+    font-weight: bold;
+}
+
+body{
+    background-image: url(silverware.jpg);
+    background-repeat: repeat;
+    background-color: white;
+    background-attachment: fixed;
+    color: #404040;
+    font-size: 11pt;
+    font-family: Georgia, Garamond, serif;
+}
+
+a {
+    color: #A4A400;
+}
+
+.strikeThru {
+    text-decoration: line-through;
+}
+
+.underLineElement {
+    text-decoration: underline
+}
+
+.commentContainer{
+    background-color: #FFFFA8;
+    text-indent: 50px;
+    font-style: italic;
+}
+
+.emphasized{
+    font-weight: bold;
+}
+
+ul {
+    list-style-image: url('pie_icon.gif');
+}
+
+.preFormatFont {
+    font-family: monospace;
+}
