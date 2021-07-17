@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name=viewport content="width=device-width, initial-scale=1">
+      <title>Javascript Lab Solution</title>
+      <script src="JavascriptSolution.js"></script>
+  </head>
+  <body>
+      <h1>Please look in Chrome developer console to see the output. CTRL_SHIFT_J</h1>
+      <script>
+          console.log("Expected output of max(20, 10) is 20: " + jsSolutionFunc(22, function(){return max(10, 22)}));
+
+          console.log("Expected output of maxOfThree(5, 4, 44) is 44: " + jsSolutionFunc(44, function(){return maxOfThree(5, 4, 44)}));
+          console.log("Expected output of maxOfThree(55, 4, 44) is 55: " + jsSolutionFunc(55, function(){return maxOfThree(55, 4, 44)}));
+          console.log("Expected output of maxOfThree(55, 4, 44) is 55: " + jsSolutionFunc(4, function(){return maxOfThree(55, 4, 44)}));
+
+          console.log("Expected output of isVowel('a')) is true: " + jsSolutionFunc(true, function(){return isVowel("a")}));
+          console.log("Expected output of isVowel('d')) is true: " + jsSolutionFunc(true, function(){return isVowel("d")}));
+
+          console.log("Expected output of sum([6, 5, 2]) is 13: "  + jsSolutionFunc(13, function(){return sum([6, 5, 2])}));
+          console.log("Expected output of multiply([6, 5, 2]) is 60: " + jsSolutionFunc(60, function(){return multiply([6, 5, 2])}));
+
+          console.log("Expected output of reverse('Hello') is olleH: " + jsSolutionFunc("olleH", function(){return reverse("Hello")}));
+
+          console.log("Expected output of findLongestWord(['sun', 'moon', 'jupiter']) is jupiter: " + jsSolutionFunc(7, function(){return findLongestWord(["sun", "moon", "jupiter"])}));
+
+          console.log("Expected output of filterLongWords: " + jsSolutionFunc(['moon', 'jupiter'], function(){return filterLongWords(["sun", "moon", "jupiter"], 3)}));
+
+          console.log("Test map/filter/reduce: ");
+          console.log("   a) multiply each element by 10: [1, 2, 3] is [10, 20, 30]: " + jsSolutionFunc([10, 20, 30], function(){ return multiplyByTen([1,2,3])}));
+          console.log("   b) return array with all elements equal to 3: [3, 4, 5, 6, 3]: is [3, 3]" + jsSolutionFunc([3,3], function(){ return filterEqualThree([3,4,5,6,3])}));
+          console.log("   c) Expected output of productAllElements([2, 4, 6]) is 48: " + jsSolutionFunc(48, function(){ return productAllElements([2, 4, 6])}));
+      </script>
+    </body>
+</html>
