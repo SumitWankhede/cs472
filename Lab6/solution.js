@@ -2,9 +2,7 @@ String.prototype.filter = function (word) {
     if(this.indexOf(word) >= 0) return this.replace(word, '');
 }
 
-
 Array.prototype.bubbleSort = function(){
-
     let a = this;
     var swapped;
     do {
@@ -18,7 +16,6 @@ Array.prototype.bubbleSort = function(){
             }
         }
     } while (swapped);
-
     return a;
 }
 
@@ -28,7 +25,6 @@ let Person = function(){
         console.log(this.name + " is now teaching " + subject);
     }
 };
-
 
 const person = {
     name : "default",
@@ -41,5 +37,5 @@ console.log("This house is not nice!".filter("not "));
 console.log([6,4,0, 3,-2,1].bubbleSort());
 
 let teacher = new Person();
-teacher.name = "Sami";
+teacher.name = "Prof Sami Taha";
 teacher.teach("WAP");
