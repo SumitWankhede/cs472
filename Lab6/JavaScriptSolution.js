@@ -1,30 +1,45 @@
-// Exercise 1 filter
-String.prototype.filter = function(str) {
-    return this.split(' ').filter(elem => !str.includes(elem)).join(' ');
-};
-
-// Exercise 2 Sorting
-Array.prototype.bubbleSort = function() {
-return this.sort();
-};
-
-// Exercise 3 Inheritance via prototype
-var Person = function() {};
-Person.prototype.initialize = function(name, age) {
-    this.name = name;
-    this.age = age;
-};
-Person.prototype.describe = function() {
-    return this.name + ", " + this.age + " years old.";
+String.prototype.filter = function (word) {
+    if(this.indexOf(word) >= 0) return this.replace(word, '');
 }
-var Student = function() {};
-Student.prototype = new Person();
-Student.prototype.learn = function(subject) {
-    console.log(this.name + " just learned " + subject);
+
+
+Array.prototype.bubbleSort = function(){
+
+    let a = this;
+    var swapped;
+    do {
+        swapped = false;
+        for (var i=0; i < a.length-1; i++) {
+            if (a[i] > a[i+1]) {
+                var temp = a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
+                swapped = true;
+            }
+        }
+    } while (swapped);
+
+    return a;
+}
+
+let Person = function(){
+     this.name = "default";
+    this.teach = function (subject) {
+        console.log(this.name + " is now teaching " + subject);
+    }
 };
 
-var Teacher = function() {};
-Teacher.prototype = new Person();
-Teacher.prototype.teach = function(subject) {
-    return this.name + ' is teaching ' + subject;
+
+const person = {
+    name : "default",
+    teach : function (subject) {
+        console.log(this.name + " is now teaching " + subject);
+    }
 };
+
+console.log("This house is not nice!".filter("not "));
+console.log([6,4,0, 3,-2,1].bubbleSort());
+
+let teacher = new Person();
+teacher.name = "Sami";
+teacher.teach("WAP");
